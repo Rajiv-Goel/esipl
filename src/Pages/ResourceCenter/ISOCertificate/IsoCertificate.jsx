@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const pdfFiles = [
-    { title: 'ESIPL Certificate', url: '../../../Assets/Resource Centre/ISO Certificates/ESIPL-ISO Certificate.pdf' },
-    { title: 'GIS Certificate', url: '../../../Assets/Resource Centre/ISO Certificates/Globe Infra Solutions-ISO Certificate.pdf' },
+    { title: 'ESIPL Certificate', url: 'https://drive.google.com/file/d/1ZhdPkSBw5W4nQrCet_esni9zQVgkJuor/view?usp=share_link' },
+    { title: 'GIS Certificate', url: 'https://drive.google.com/file/d/1GJDBNJmKVPYyMv_dXYGGMyGN7LiVQ8pY/view?usp=share_link' },
 ];
 
 const IsoCertificate = () => {
@@ -10,6 +10,8 @@ const IsoCertificate = () => {
 
     const handlePdfChange = (url) => {
         setCurrentPdf(url);
+        // Open the PDF in a new tab
+        window.open(url, '_blank');
     };
 
     return (
@@ -36,7 +38,6 @@ const IsoCertificate = () => {
                     </div>
                 ))}
             </div>
-            
         </div>
     );
 }

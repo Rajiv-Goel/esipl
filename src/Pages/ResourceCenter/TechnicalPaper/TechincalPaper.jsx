@@ -1,10 +1,10 @@
 import React from 'react';
 
 const pdfFiles = [
-    { title: 'Paper1', url: 'http://example.com/path/to/brochure.pdf' }, // Replace with the actual hosted URL
-    { title: 'Paper2', url: 'http://example.com/path/to/brochure.pdf' },
-    { title: 'Paper3', url: 'http://example.com/path/to/brochure.pdf' },
-    { title: 'Paper4', url: 'http://example.com/path/to/brochure.pdf' },
+    { title: 'Paper1', url: 'https://drive.google.com/file/d/1LSICgg9oRHjloopTmFDYagr0hmS5wk3R/view?usp=sharing' }, // Replace with the actual hosted URL
+    { title: 'Paper2', url: 'https://drive.google.com/file/d/1zeIn9vNqyfXVKohWBfDSD2kMDfmtr5eE/view?usp=sharing' },
+    { title: 'Paper3', url: 'https://drive.google.com/file/d/1JbKgXa-e-s6OlqO9PthHdBZwqgVoWZa4/view?usp=sharing' },
+    { title: 'Paper4', url: 'https://drive.google.com/file/d/1zX58-wP1AsZrXgYtj6hXAd8bm8u8wClO/view?usp=sharing' },
 ];
 
 const TechnicalPapers = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const pdfFiles = [
-    { title: 'Case Study', url: 'http://example.com/path/to/brochure.pdf' }, // Replace with the actual hosted URL
+    { title: 'Case Study', url: 'https://drive.google.com/file/d/1pm4vgjsvWrQFHAUsZVDUmRdOudrnnfwx/view?usp=share_link' }, // Replace with the actual hosted URL
 ];
 
 const CaseStudy = () => {

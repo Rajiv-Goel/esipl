@@ -45,7 +45,7 @@ const Career = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-orange-400 bg-opacity-50">
+      <div className="flex items-center justify-center h-screen bg-orange-600 bg-opacity-50">
         <div className="loader text-white text-5xl">Careers</div>
       </div>
     );

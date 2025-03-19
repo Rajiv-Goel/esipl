@@ -1,7 +1,7 @@
 import React from 'react';
 
 const pdfFiles = [
-    { title: 'Document', url: 'http://example.com/path/to/brochure.pdf' }, // Replace with the actual hosted URL
+    { title: 'Document', url: 'https://drive.google.com/file/d/1i20SxX4nUug3QPZbecXYEnUfCj2i2wlg/view?usp=share_link' }, // Replace with the actual hosted URL
 ];
 
 const AvoidBadPractice = () => {
