@@ -42,7 +42,7 @@ function Navbar() {
   return (
     <nav className={`text-black p-4 flex items-center h-[7vh] border-black border-b-2 fixed bg-white bg-opacity-60 top-0 left-0 right-0 font-bold text-2xl transition-transform duration-200 ${visible ? 'transform-none' : '-translate-y-full'} z-50`}>
       {/* Logo on the left */}
-      <img className='h-16 mr-4' src={esipllogo} alt="Logo" />
+      <img className="h-16 max-w-full object-contain flex-shrink-0 mr-4" src={esipllogo} alt="Logo" />
 
       {/* Centered Content */}
       <div className="flex-grow hidden lg:flex justify-center items-center space-x-10">
