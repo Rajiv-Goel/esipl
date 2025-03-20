@@ -36,7 +36,7 @@ function Footer() {
             src={image1} 
             alt="ISO Certificate" 
             className="w-full h-400px object-cover" 
-            style={{ height: '370px' }} 
+            style={{ height: '470px' }} 
           />
         </div>
 
