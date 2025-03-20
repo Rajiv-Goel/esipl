@@ -1,9 +1,9 @@
 import React from 'react';
-import yourImage from '../../Assets/talktous/talk to us.jpg'; // Update with your image path
+import yourImage from '../../Assets/talktous/talk to us - Copy.png'; // Update with your image path
 
 const TalkToUs = () => {
     return (
-        <div className="relative flex flex-col lg:flex-row justify-between items-center h-screen p-0 bg-gradient-to-r from-orange-600 to-orange-300 overflow-hidden">
+        <div className="relative flex flex-col lg:flex-row justify-between items-center  p-0 bg-gradient-to-r from-orange-600 to-orange-300 overflow-hidden">
             {/* Decorative Shapes */}
             <div className="absolute inset-0 flex justify-center items-center">
                 {/* Decorative shapes code remains unchanged */}

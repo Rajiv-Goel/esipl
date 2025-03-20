@@ -36,15 +36,34 @@ const News = () => {
 
           {/* Timeline Items */}
           <div className="space-y-12">
-            {/* First Item (Right) */}
-            <div className="timeline-item flex justify-end opacity-0 transform transition-transform duration-500 slide-in-right">
+          <div className="timeline-item flex justify-end opacity-0 transform transition-transform duration-500 slide-in-right">
               <div className="bg-white p-6 rounded-lg shadow-lg relative w-[40vw] max-w-[40vw]">
                 <h2 className="text-xl font-semibold text-orange-500">
-                  Soil Nailing Design & Execution work at Mukarba Chowk to Panipat section from Welspun Enterprises Ltd.
+                Gabion Gravity Wall work with Bi-axial Reinforcement
+                </h2>
+                
+              </div>
+            </div>  
+          <div className="timeline-item flex justify-start opacity-0 transform transition-transform duration-500 slide-in-left">
+              <div className="bg-white p-6 rounded-lg shadow-lg relative w-[40vw] max-w-[40vw]">
+                <h2 className="text-xl font-semibold text-orange-500">
+                Gabion Wall work in Mining Area - Assam
                 </h2>
                 
               </div>
             </div>
+
+            <div className="timeline-item flex justify-end opacity-0 transform transition-transform duration-500 slide-in-right">
+              <div className="bg-white p-6 rounded-lg shadow-lg relative w-[40vw] max-w-[40vw]">
+                <h2 className="text-xl font-semibold text-orange-500">
+                RS Wall Work in Indore-Ujjain Road Project
+                </h2>
+                
+              </div>
+            </div>   
+            
+            {/* First Item (Right) */}
+            
 
             {/* Second Item (Left) */}
             <div className="timeline-item flex justify-start opacity-0 transform transition-transform duration-500 slide-in-left">
@@ -67,20 +86,7 @@ const News = () => {
             </div>
 
             {/* Fourth Item (Left) */}
-            <div className="timeline-item flex justify-start opacity-0 transform transition-transform duration-500 slide-in-left">
-              <div className="bg-white p-6 rounded-lg shadow-lg relative w-[40vw] max-w-[40vw]">
-                <h2 className="text-xl font-semibold text-orange-500">
-                  Globe Infra/ESIPL bags new projects:
-                </h2>
-                <ul className="list-disc ml-5 mt-2 text-black">
-                  <li>RS Wall works from DRB Infrastructure Pvt. Ltd. in Jammu.</li>
-                  <li>RS Wall works (block Fascia) at Kasganj bypass in Uttar Pradesh from GR Infra-projects Pvt ltd.</li>
-                  <li>RS Wall works in Ranchi-Kolkata Project (Pkg-10&13) from HG Infrastructure Pvt Ltd.</li>
-                  <li>Slope Protection Work at Kamlapuram-Oddanchatram section from DRN Infrastructure Pvt. Ltd. in Tamil Nadu.</li>
-                  <li>RS Wall works (Gabion Fascia) at Bangalore-Chennai Expressway (Pkg-01) (Andhra Pradesh) from Montecarlo Ltd.</li>
-                </ul>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>

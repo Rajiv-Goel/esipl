@@ -10,15 +10,11 @@ const sitePictureImages = importAll(require.context('../../Assets/Gallery/SitePi
 const annualMeetImages = importAll(require.context('../../Assets/Gallery/AnnualMeet', false, /\.(png|jpe?g|svg)$/));
 const festivalCelebrationImages = importAll(require.context('../../Assets/Gallery/FestivalsCelebration', false, /\.(png|jpe?g|svg)$/));
 const coCurricularActivityImages = importAll(require.context('../../Assets/Gallery/Co-curricularActivities', false, /\.(png|jpe?g|svg)$/));
-// Log results
-console.log('Site Pictures:', sitePictureImages);
-console.log('Annual Meet:', annualMeetImages);
-console.log('Festival Celebration:', festivalCelebrationImages);
-console.log('Co-curricular Activities:', coCurricularActivityImages);
+
 const Gallery = () => {
     const sectionRefs = useRef([]);
     const [activeSection, setActiveSection] = useState('');
-    const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(null);  // Track selected image
     const [currentImages, setCurrentImages] = useState([]);
 
     useEffect(() => {
@@ -43,7 +39,6 @@ const Gallery = () => {
                         default:
                             setCurrentImages([]);
                     }
-                    console.log('Active Section:', sectionTitle); // Log active section
                 }
             });
         }, { threshold: 0.5 });
@@ -63,20 +58,12 @@ const Gallery = () => {
         };
     }, []);
 
-    const handleImageClick = (index) => {
-        setSelectedImageIndex(index);
+    const handleImageClick = (image) => {
+        setSelectedImage(image); // Set the clicked image to display in extended view
     };
 
     const closeModal = () => {
-        setSelectedImageIndex(null);
-    };
-
-    const nextImage = () => {
-        setSelectedImageIndex((prevIndex) => (prevIndex + 1) % currentImages.length);
-    };
-
-    const prevImage = () => {
-        setSelectedImageIndex((prevIndex) => (prevIndex - 1 + currentImages.length) % currentImages.length);
+        setSelectedImage(null); // Close the modal
     };
 
     return (
@@ -106,12 +93,12 @@ const Gallery = () => {
                 ))}
             </main>
 
-            {selectedImageIndex !== null && currentImages.length > 0 && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50">
-                    <button onClick={prevImage} className="absolute left-4 text-white text-3xl">&lt;</button>
-                    <img src={currentImages[selectedImageIndex]} alt="Enlarged View" className="max-w-full max-h-full p-4 rounded-lg" />
-                    <button onClick={nextImage} className="absolute right-4 text-white text-3xl">&gt;</button>
-                    <button onClick={closeModal} className="absolute top-4 right-4 text-white text-3xl">×</button>
+            {/* Modal for extended image view */}
+            {selectedImage && (
+                <div className="image-modal" onClick={closeModal}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                        <img src={selectedImage} alt="Extended View" className="modal-image" />
+                    </div>
                 </div>
             )}
         </div>
@@ -138,18 +125,17 @@ const GreetingOverlay = () => {
 };
 
 const Section = ({ title, images, setRef, onImageClick }) => {
-    console.log('Images for section:', title, images); // Log images for debugging
     return (
         <section ref={setRef} data-title={title} className="py-16">
             <h2 className="text-4xl font-bold text-center text-orange-600 mb-8">{title}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 animate__animated animate__fadeIn">
                 {images.map((image, index) => (
                     <div className="relative group" key={index}>
-                        <img 
-                            src={image} 
-                            alt={`Image ${index + 1}`} 
+                        <img
+                            src={image}
+                            alt={`Image ${index + 1}`}
                             className="w-full h-96 object-cover rounded-xl transform transition-transform duration-500 hover:scale-110 shadow-2xl animate__animated animate__zoomIn cursor-pointer"
-                            onClick={() => onImageClick(index)} 
+                            onClick={() => onImageClick(image)} // Trigger click to open modal
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 flex items-center justify-center rounded-xl">
                             <p className="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Image</p>

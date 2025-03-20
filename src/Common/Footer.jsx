@@ -36,7 +36,7 @@ function Footer() {
             src={image1} 
             alt="ISO Certificate" 
             className="w-full h-400px object-cover" 
-            style={{ height: '470px' }} 
+            style={{ height: '370px' }} 
           />
         </div>
 
@@ -48,7 +48,7 @@ function Footer() {
           </p>
           {/* Embed Google Maps */}
           <iframe 
-            src="https://www.google.com/maps/d/u/0/embed?mid=13MVp0yf69XHfw-Bf31x5N2G1pT9wik4&ehbc=2E312F" 
+            src="https://www.google.com/maps/d/embed?mid=1SnGI9B3SFk1m4Dr1I-U-HaQrkKDL5vs&ehbc=2E312F" 
             width="100%" 
             height="400" 
             style={{ border: 0 }} 
