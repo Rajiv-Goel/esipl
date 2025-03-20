@@ -22,13 +22,17 @@ const ContactUsButton = () => {
                 <div className="flex flex-col mt-2 animate-fadeIn">
                     <a 
                         href="mailto:info@esipl.net" 
+                        target="_blank" // Open in new window/tab
+                        rel="noopener noreferrer" // Security best practice
                         className="bg-white rounded-lg py-2 px-4 mb-2 flex items-center transition duration-300 hover:bg-gray-100 shadow hover:shadow-md transform hover:scale-105"
                     >
                         <FaEnvelope className="w-5 h-5 mr-2 text-blue-500" />
-                        Gmail
+                        Email
                     </a>
                     <a 
                         href="https://www.facebook.com/esipldelhi/" 
+                        target="_blank" // Open in new window/tab
+                        rel="noopener noreferrer" // Security best practice
                         className="bg-white rounded-lg py-2 px-4 mb-2 flex items-center transition duration-300 hover:bg-gray-100 shadow hover:shadow-md transform hover:scale-105"
                     >
                         <FaFacebook className="w-5 h-5 mr-2 text-blue-600" />
@@ -36,6 +40,8 @@ const ContactUsButton = () => {
                     </a>
                     <a 
                         href="https://www.linkedin.com/company/earthcon-systems/" 
+                        target="_blank" // Open in new window/tab
+                        rel="noopener noreferrer" // Security best practice
                         className="bg-white rounded-lg py-2 px-4 mb-2 flex items-center transition duration-300 hover:bg-gray-100 shadow hover:shadow-md transform hover:scale-105"
                     >
                         <FaLinkedin className="w-5 h-5 mr-2 text-blue-700" />

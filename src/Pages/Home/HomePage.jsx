@@ -9,16 +9,19 @@ import logoGIF from '../../Assets/logo/logoaniamtion.gif'; // Adjust the path to
 import { motion } from 'framer-motion';
 import './styles.css'; // Ensure to import your CSS file
 
-const HomePage = () => {
+const HomePage = ({ onLoad }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
+            if (onLoad) {
+                onLoad(); // Notify parent that loading is complete
+            }
         }, 3000); // Adjust the loading time as needed
 
         return () => clearTimeout(timer);
-    }, []);
+    }, [onLoad]);
 
     if (loading) {
         return (
