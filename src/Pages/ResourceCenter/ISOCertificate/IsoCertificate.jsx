@@ -16,7 +16,7 @@ const IsoCertificate = () => {
 
     return (
         <div className="flex flex-col items-center min-h-screen p-4">
-            <h1 className="text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 py-3 pt-10">
+            <h1 className="text-7xl text-white font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 py-3 pt-10">
                 ISO Certificate
             </h1>
             <div className="mt-8 mb-4 flex space-x-4">

@@ -77,7 +77,7 @@ const RetrainingStructures = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-7xl font-extrabold pt-10 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 py-3">
+        <h1 className="text-7xl font-extrabold pt-10 text-white bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 py-3">
           Retaining Structures
         </h1>
         <p className="text-2xl mt-4 text-gray-600">Supporting the stability of our landscapes.</p>

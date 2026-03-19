@@ -95,15 +95,23 @@ const Gallery = () => {
 
             {/* Modal for extended image view */}
             {selectedImage && (
-                <div className="image-modal" onClick={closeModal}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <img src={selectedImage} alt="Extended View" className="modal-image" />
+                <div className="image-modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4" onClick={closeModal}>
+                    <div className="modal-content relative max-w-5xl w-full rounded-xl overflow-hidden bg-white" onClick={(e) => e.stopPropagation()}>
+                        <button
+                            className="close-button absolute right-3 top-3 z-10 rounded-full bg-black bg-opacity-60 px-3 py-1.5 text-white font-bold hover:bg-black"
+                            onClick={closeModal}
+                            aria-label="Close image"
+                        >
+                            ×
+                        </button>
+                        <img src={selectedImage} alt="Extended View" className="modal-image w-full h-auto max-h-[80vh] object-contain" />
                     </div>
                 </div>
             )}
         </div>
     );
 };
+
 
 const GreetingOverlay = () => {
     const [showGreeting, setShowGreeting] = useState(true);
@@ -127,18 +135,18 @@ const GreetingOverlay = () => {
 const Section = ({ title, images, setRef, onImageClick }) => {
     return (
         <section ref={setRef} data-title={title} className="py-16">
-            <h2 className="text-4xl font-bold text-center text-orange-600 mb-8">{title}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 animate__animated animate__fadeIn">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center text-orange-600 mb-8">{title}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 animate__animated animate__fadeIn">
                 {images.map((image, index) => (
-                    <div className="relative group" key={index}>
+                    <div className="relative group overflow-hidden rounded-xl shadow-lg" key={index}>
                         <img
                             src={image}
                             alt={`Image ${index + 1}`}
-                            className="w-full h-96 object-cover rounded-xl transform transition-transform duration-500 hover:scale-110 shadow-2xl animate__animated animate__zoomIn cursor-pointer"
-                            onClick={() => onImageClick(image)} // Trigger click to open modal
+                            className="w-full h-72 sm:h-80 md:h-64 lg:h-72 object-cover rounded-xl transform transition duration-500 hover:scale-105 cursor-pointer"
+                            onClick={() => onImageClick(image)}
                         />
-                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 flex items-center justify-center rounded-xl">
-                            <p className="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">View Image</p>
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 flex items-center justify-center rounded-xl">
+                            <p className="text-white text-base sm:text-lg font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">View Image</p>
                         </div>
                     </div>
                 ))}

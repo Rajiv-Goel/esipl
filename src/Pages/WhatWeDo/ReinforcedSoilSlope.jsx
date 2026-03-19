@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import image3 from '../../Assets/What we do Photos/Reinforced Soil Slope/image3.png'
-import image1 from '../../Assets/What we do Photos/Reinforced Soil Slope/image1.png';
 import image2 from '../../Assets/What we do Photos/Reinforced Soil Slope/image2.png'
 
 const imageSliderData = [image3,image2];
@@ -47,7 +46,7 @@ const ReinforcedSoilSlope = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-7xl font-extrabold text-transparent  pt-10 bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 py-3">
+        <h1 className="text-7xl font-extrabold text-transparent text-white pt-10 bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 py-3">
         Reinforced Soil Slope
         </h1>
         {/* <p className="text-2xl mt-4 text-gray-600">Mitigating risks, securing the future.</p> */}
