@@ -14,7 +14,7 @@ function Footer() {
             Earthcon Systems (India) Pvt. Ltd., an ISO: 9001:2015 organization is committed to providing comprehensive services like design, supply, and construction.
           </p>
           <p className="text-base mb-2">
-            <strong>Address:</strong> D-40, Pocket D, Okhla Phase I, Okhla Industrial Area, New Delhi, Delhi 110020
+            <strong>Address:</strong> A-141, 8th Floor, Sector-136, Noida , Uttar Pradesh 201304
           </p>
           <p className="text-base mb-2">
             <strong>Email:</strong> info@esipl.net
